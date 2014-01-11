@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE2FF0A21880E41400569886 /* ZOMZombieAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2FF0A11880E41400569886 /* ZOMZombieAnnotationView.m */; };
+		EE2FF0A81880EDAA00569886 /* ZOMZombieAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2FF0A71880EDAA00569886 /* ZOMZombieAnnotation.m */; };
 		EEFF3B161877473F00E40E21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFF3B151877473F00E40E21 /* Foundation.framework */; };
 		EEFF3B181877473F00E40E21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFF3B171877473F00E40E21 /* CoreGraphics.framework */; };
 		EEFF3B1A1877473F00E40E21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFF3B191877473F00E40E21 /* UIKit.framework */; };
@@ -14,13 +16,19 @@
 		EEFF3B221877473F00E40E21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF3B211877473F00E40E21 /* main.m */; };
 		EEFF3B261877473F00E40E21 /* ZOMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF3B251877473F00E40E21 /* ZOMAppDelegate.m */; };
 		EEFF3B291877473F00E40E21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEFF3B271877473F00E40E21 /* Main.storyboard */; };
-		EEFF3B2C1877473F00E40E21 /* ZOMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF3B2B1877473F00E40E21 /* ZOMViewController.m */; };
 		EEFF3B2E1877473F00E40E21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEFF3B2D1877473F00E40E21 /* Images.xcassets */; };
 		EEFF3B351877473F00E40E21 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFF3B341877473F00E40E21 /* XCTest.framework */; };
 		EEFF3B361877473F00E40E21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFF3B151877473F00E40E21 /* Foundation.framework */; };
 		EEFF3B371877473F00E40E21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFF3B191877473F00E40E21 /* UIKit.framework */; };
 		EEFF3B3F1877473F00E40E21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEFF3B3D1877473F00E40E21 /* InfoPlist.strings */; };
 		EEFF3B411877473F00E40E21 /* Zombie_RunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF3B401877473F00E40E21 /* Zombie_RunTests.m */; };
+		EEFF3B52187749D000E40E21 /* ZOMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF3B51187749D000E40E21 /* ZOMGameViewController.m */; };
+		EEFF3B55187749DF00E40E21 /* ZOMSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF3B54187749DF00E40E21 /* ZOMSetupViewController.m */; };
+		EEFF3B58187749F300E40E21 /* ZOMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF3B57187749F300E40E21 /* ZOMMenuViewController.m */; };
+		EEFF3B5E18774E4800E40E21 /* ZOMGame.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF3B5D18774E4800E40E21 /* ZOMGame.m */; };
+		EEFF3B6118774F7B00E40E21 /* ZOMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF3B6018774F7B00E40E21 /* ZOMPlayer.m */; };
+		EEFF3B6318779E5500E40E21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFF3B6218779E5500E40E21 /* MapKit.framework */; };
+		EEFF3B6518779FCA00E40E21 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFF3B6418779FCA00E40E21 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE2FF0A01880E41400569886 /* ZOMZombieAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOMZombieAnnotationView.h; sourceTree = "<group>"; };
+		EE2FF0A11880E41400569886 /* ZOMZombieAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOMZombieAnnotationView.m; sourceTree = "<group>"; };
+		EE2FF0A61880EDAA00569886 /* ZOMZombieAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOMZombieAnnotation.h; sourceTree = "<group>"; };
+		EE2FF0A71880EDAA00569886 /* ZOMZombieAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOMZombieAnnotation.m; sourceTree = "<group>"; };
 		EEFF3B121877473F00E40E21 /* Zombie Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zombie Run.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFF3B151877473F00E40E21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEFF3B171877473F00E40E21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +57,24 @@
 		EEFF3B241877473F00E40E21 /* ZOMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZOMAppDelegate.h; sourceTree = "<group>"; };
 		EEFF3B251877473F00E40E21 /* ZOMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZOMAppDelegate.m; sourceTree = "<group>"; };
 		EEFF3B281877473F00E40E21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EEFF3B2A1877473F00E40E21 /* ZOMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZOMViewController.h; sourceTree = "<group>"; };
-		EEFF3B2B1877473F00E40E21 /* ZOMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZOMViewController.m; sourceTree = "<group>"; };
 		EEFF3B2D1877473F00E40E21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EEFF3B331877473F00E40E21 /* Zombie RunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zombie RunTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFF3B341877473F00E40E21 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EEFF3B3C1877473F00E40E21 /* Zombie RunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zombie RunTests-Info.plist"; sourceTree = "<group>"; };
 		EEFF3B3E1877473F00E40E21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EEFF3B401877473F00E40E21 /* Zombie_RunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zombie_RunTests.m; sourceTree = "<group>"; };
+		EEFF3B50187749D000E40E21 /* ZOMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOMGameViewController.h; sourceTree = "<group>"; };
+		EEFF3B51187749D000E40E21 /* ZOMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOMGameViewController.m; sourceTree = "<group>"; };
+		EEFF3B53187749DF00E40E21 /* ZOMSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOMSetupViewController.h; sourceTree = "<group>"; };
+		EEFF3B54187749DF00E40E21 /* ZOMSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOMSetupViewController.m; sourceTree = "<group>"; };
+		EEFF3B56187749F300E40E21 /* ZOMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOMMenuViewController.h; sourceTree = "<group>"; };
+		EEFF3B57187749F300E40E21 /* ZOMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOMMenuViewController.m; sourceTree = "<group>"; };
+		EEFF3B5C18774E4800E40E21 /* ZOMGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOMGame.h; sourceTree = "<group>"; };
+		EEFF3B5D18774E4800E40E21 /* ZOMGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOMGame.m; sourceTree = "<group>"; };
+		EEFF3B5F18774F7B00E40E21 /* ZOMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZOMPlayer.h; sourceTree = "<group>"; };
+		EEFF3B6018774F7B00E40E21 /* ZOMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZOMPlayer.m; sourceTree = "<group>"; };
+		EEFF3B6218779E5500E40E21 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EEFF3B6418779FCA00E40E21 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEFF3B6518779FCA00E40E21 /* CoreLocation.framework in Frameworks */,
+				EEFF3B6318779E5500E40E21 /* MapKit.framework in Frameworks */,
 				EEFF3B181877473F00E40E21 /* CoreGraphics.framework in Frameworks */,
 				EEFF3B1A1877473F00E40E21 /* UIKit.framework in Frameworks */,
 				EEFF3B161877473F00E40E21 /* Foundation.framework in Frameworks */,
@@ -101,6 +125,8 @@
 		EEFF3B141877473F00E40E21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEFF3B6418779FCA00E40E21 /* CoreLocation.framework */,
+				EEFF3B6218779E5500E40E21 /* MapKit.framework */,
 				EEFF3B151877473F00E40E21 /* Foundation.framework */,
 				EEFF3B171877473F00E40E21 /* CoreGraphics.framework */,
 				EEFF3B191877473F00E40E21 /* UIKit.framework */,
@@ -112,12 +138,9 @@
 		EEFF3B1B1877473F00E40E21 /* Zombie Run */ = {
 			isa = PBXGroup;
 			children = (
-				EEFF3B241877473F00E40E21 /* ZOMAppDelegate.h */,
-				EEFF3B251877473F00E40E21 /* ZOMAppDelegate.m */,
-				EEFF3B271877473F00E40E21 /* Main.storyboard */,
-				EEFF3B2A1877473F00E40E21 /* ZOMViewController.h */,
-				EEFF3B2B1877473F00E40E21 /* ZOMViewController.m */,
-				EEFF3B2D1877473F00E40E21 /* Images.xcassets */,
+				EEFF3B4C1877475500E40E21 /* Controller */,
+				EEFF3B4B1877474E00E40E21 /* View */,
+				EEFF3B4A1877474900E40E21 /* Model */,
 				EEFF3B1C1877473F00E40E21 /* Supporting Files */,
 			);
 			path = "Zombie Run";
@@ -126,6 +149,9 @@
 		EEFF3B1C1877473F00E40E21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EEFF3B2D1877473F00E40E21 /* Images.xcassets */,
+				EEFF3B241877473F00E40E21 /* ZOMAppDelegate.h */,
+				EEFF3B251877473F00E40E21 /* ZOMAppDelegate.m */,
 				EEFF3B1D1877473F00E40E21 /* Zombie Run-Info.plist */,
 				EEFF3B1E1877473F00E40E21 /* InfoPlist.strings */,
 				EEFF3B211877473F00E40E21 /* main.m */,
@@ -150,6 +176,42 @@
 				EEFF3B3D1877473F00E40E21 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEFF3B4A1877474900E40E21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEFF3B5C18774E4800E40E21 /* ZOMGame.h */,
+				EEFF3B5D18774E4800E40E21 /* ZOMGame.m */,
+				EEFF3B5F18774F7B00E40E21 /* ZOMPlayer.h */,
+				EEFF3B6018774F7B00E40E21 /* ZOMPlayer.m */,
+				EE2FF0A01880E41400569886 /* ZOMZombieAnnotationView.h */,
+				EE2FF0A11880E41400569886 /* ZOMZombieAnnotationView.m */,
+				EE2FF0A61880EDAA00569886 /* ZOMZombieAnnotation.h */,
+				EE2FF0A71880EDAA00569886 /* ZOMZombieAnnotation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EEFF3B4B1877474E00E40E21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEFF3B271877473F00E40E21 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EEFF3B4C1877475500E40E21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EEFF3B50187749D000E40E21 /* ZOMGameViewController.h */,
+				EEFF3B51187749D000E40E21 /* ZOMGameViewController.m */,
+				EEFF3B53187749DF00E40E21 /* ZOMSetupViewController.h */,
+				EEFF3B54187749DF00E40E21 /* ZOMSetupViewController.m */,
+				EEFF3B56187749F300E40E21 /* ZOMMenuViewController.h */,
+				EEFF3B57187749F300E40E21 /* ZOMMenuViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +262,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Hunter Kyle Gearhart";
 				TargetAttributes = {
+					EEFF3B111877473F00E40E21 = {
+						DevelopmentTeam = 72N92C4C52;
+					};
 					EEFF3B321877473F00E40E21 = {
 						TestTargetID = EEFF3B111877473F00E40E21;
 					};
@@ -250,8 +315,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEFF3B2C1877473F00E40E21 /* ZOMViewController.m in Sources */,
+				EEFF3B58187749F300E40E21 /* ZOMMenuViewController.m in Sources */,
+				EEFF3B6118774F7B00E40E21 /* ZOMPlayer.m in Sources */,
+				EE2FF0A21880E41400569886 /* ZOMZombieAnnotationView.m in Sources */,
+				EEFF3B55187749DF00E40E21 /* ZOMSetupViewController.m in Sources */,
+				EE2FF0A81880EDAA00569886 /* ZOMZombieAnnotation.m in Sources */,
+				EEFF3B52187749D000E40E21 /* ZOMGameViewController.m in Sources */,
 				EEFF3B221877473F00E40E21 /* main.m in Sources */,
+				EEFF3B5E18774E4800E40E21 /* ZOMGame.m in Sources */,
 				EEFF3B261877473F00E40E21 /* ZOMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,10 +450,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Zombie Run/Zombie Run-Prefix.pch";
 				INFOPLIST_FILE = "Zombie Run/Zombie Run-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,10 +466,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Zombie Run/Zombie Run-Prefix.pch";
 				INFOPLIST_FILE = "Zombie Run/Zombie Run-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -461,6 +538,7 @@
 				EEFF3B461877473F00E40E21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEFF3B471877473F00E40E21 /* Build configuration list for PBXNativeTarget "Zombie RunTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +547,7 @@
 				EEFF3B491877473F00E40E21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,23 +1,23 @@
 //
-//  ZOMViewController.m
+//  ZOMMenuViewController.m
 //  Zombie Run
 //
 //  Created by Hunter Kyle Gearhart on 03/01/2014.
 //  Copyright (c) 2014 Hunter Kyle Gearhart. All rights reserved.
 //
 
-#import "ZOMViewController.h"
+#import "ZOMMenuViewController.h"
 
-@interface ZOMViewController ()
+@interface ZOMMenuViewController ()
 
 @end
 
-@implementation ZOMViewController
+@implementation ZOMMenuViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
