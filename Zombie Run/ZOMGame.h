@@ -15,7 +15,7 @@
 @property NSUInteger zombieSpeed;
 @property NSArray *zombies; // of ZOMZombie
 
-- (id) initWithNumZombies:(NSUInteger)number withSpeed:(NSUInteger)speed;
+- (id)initWithNumZombies:(NSUInteger)number withSpeed:(NSUInteger)speed;
 
 
 @end

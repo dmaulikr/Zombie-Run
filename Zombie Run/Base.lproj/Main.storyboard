@@ -7,7 +7,6 @@
         <!--Setup View Controller - Setup-->
         <scene sceneID="Da2-ah-TTh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DsH-oF-6am" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Fz9-I9-KHK" customClass="ZOMSetupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g8M-Bu-s51"/>
@@ -30,7 +29,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="xxQ-gT-KC7">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="xxQ-gT-KC7">
                                 <rect key="frame" x="18" y="144" width="284" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -87,6 +86,7 @@
                         <outlet property="zombieSpeedSlider" destination="xxQ-gT-KC7" id="qsF-60-D7u"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DsH-oF-6am" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="592" y="111"/>
         </scene>
@@ -159,7 +159,6 @@
         <!--Navigation Controller-->
         <scene sceneID="K8H-EX-uWd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vo7-mu-IoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ylk-Zr-obX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sI9-m9-279">
@@ -171,6 +170,7 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="J9g-05-HJX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vo7-mu-IoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-374" y="111"/>
         </scene>
