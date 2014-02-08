@@ -21,7 +21,7 @@
     if (self) {
         self.numZombies = number;
         self.zombieSpeed = speed;
-        [self placeZombies];
+        self.newGame = TRUE;
     }
     
     return self;

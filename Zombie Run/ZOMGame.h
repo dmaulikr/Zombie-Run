@@ -14,6 +14,7 @@
 @property NSUInteger numZombies;
 @property NSUInteger zombieSpeed;
 @property NSArray *zombies; // of ZOMZombie
+@property (nonatomic, getter=isNewGame) BOOL newGame;
 
 - (id)initWithNumZombies:(NSUInteger)number withSpeed:(NSUInteger)speed;
 

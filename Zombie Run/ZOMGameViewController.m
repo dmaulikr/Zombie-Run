@@ -10,7 +10,6 @@
 
 @interface ZOMGameViewController ()
 
-@property (getter = isFirstTimeLocatingUser) BOOL firstTimeLocatingUser;
 @property (weak) NSTimer *repeatingTimer;
 
 @end
@@ -38,9 +37,6 @@
     self.map.showsUserLocation = YES;
     self.map.delegate = self;
     
-    // The next time the user is located it will be the first time, that is when we set the default zoom-level
-    self.firstTimeLocatingUser = YES;
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,15 +45,37 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Places the ZOMZombieAnnotation(s) on-screen using their coordinates
+// Places the ZOMZombieAnnotation(s) randomly on the map at at least a calculated
+// distance form the user. The idea here is that the zombies must lie outside of a
+// certain "buffer distance" which is calculated as a 1 minute time-to-user given
+// the set zombie speed.
 - (void)placeZombiesOnMap {
+    // Get the user's location, depending on which we'll place the zombies
+    MKMapPoint userMapPointLocation = MKMapPointForCoordinate(self.map.userLocation.coordinate);
+    
+    // Calculate the "buffer distance", which is the number of meters a zombie
+    // can cover in one minute
+    double numberMapPointsPerMeter = MKMapPointsPerMeterAtLatitude(self.map.userLocation.coordinate.latitude);
+    // Defined as the number of meters that a zombie can run in a minute
+    unsigned long bufferDistanceInMeters = ((self.game.zombieSpeed * 1000) / 60);
+    
     // For the number of zombies in this game, make an annotation and add it to the game map
     for (int i = 0; i < self.game.numZombies; i++) {
         ZOMZombieAnnotation *zombieAnnotation = [[ZOMZombieAnnotation alloc] init];
-        CLLocationCoordinate2D coordinate;
-        coordinate.latitude = self.map.userLocation.coordinate.latitude;
-        coordinate.longitude = self.map.userLocation.coordinate.longitude + (0.008 * (i+1));
-        [zombieAnnotation setCoordinate:coordinate];
+        MKMapPoint zombieMapPointLocation;
+        // We place the zombie a random latitude and longitude away from the user
+        // with either the latitude or longitude being at least the "buffer
+        // distance" away and a max of 2 * the "buffer distance"
+        long xChangeInMeters = (arc4random() % (bufferDistanceInMeters * 2)) - bufferDistanceInMeters;
+        long yChangeInMeters = (arc4random() % (bufferDistanceInMeters * 2)) - bufferDistanceInMeters;
+        if ((arc4random() % 100) > 50) {
+            xChangeInMeters = (xChangeInMeters > 0) ? xChangeInMeters + bufferDistanceInMeters : xChangeInMeters - bufferDistanceInMeters;
+        } else {
+            yChangeInMeters = (yChangeInMeters > 0) ? yChangeInMeters + bufferDistanceInMeters : yChangeInMeters - bufferDistanceInMeters;
+        }
+        zombieMapPointLocation.x = userMapPointLocation.x + (numberMapPointsPerMeter * xChangeInMeters);
+        zombieMapPointLocation.y = userMapPointLocation.y + (numberMapPointsPerMeter * yChangeInMeters);
+        [zombieAnnotation setCoordinate:MKCoordinateForMapPoint(zombieMapPointLocation)];
         [self.map addAnnotation:zombieAnnotation];
     }
     
@@ -72,7 +90,7 @@
     // Cancel a preexisting timer.
     [self.repeatingTimer invalidate];
     
-    // TODO: Convert miles to kilometers
+    // TODO: Include the ability to use miles instead of kilometers
     // Setup the speed of the zombies by calculating the number of
     // centimeters the zombie will need to travel each second given
     // the set speed
@@ -101,21 +119,20 @@
             
             // Pull the zombie's location as both a coordinate and then a MKMapPoint
             CLLocationCoordinate2D zombieLocation = zombieAnnotation.coordinate;
-            MKMapPoint zombieMapPointLocation = MKMapPointForCoordinate(zombieAnnotation.coordinate);
+            MKMapPoint zombieMapPointLocation = MKMapPointForCoordinate(zombieLocation);
             
             // Randomly move the zombie laterally or vertically
-            if ((arc4random() % 1) > 0.5) {
-                 zombieMapPointLocation.y = (zombieLocation.latitude < userLocation.latitude) ? zombieMapPointLocation.y + numberMapPointsPerCentimeter : zombieMapPointLocation.y - numberMapPointsPerCentimeter;
+            if ((arc4random() % 100) > 50) {
+                 zombieMapPointLocation.y = (zombieLocation.latitude < userLocation.latitude) ? zombieMapPointLocation.y - numberMapPointsPerCentimeter : zombieMapPointLocation.y + numberMapPointsPerCentimeter;
             } else {
-                zombieMapPointLocation.x = (zombieLocation.longitude < userLocation.longitude) ? zombieMapPointLocation.x + numberMapPointsPerCentimeter: zombieMapPointLocation.x - numberMapPointsPerCentimeter;
+                zombieMapPointLocation.x = (zombieLocation.longitude < userLocation.longitude) ? zombieMapPointLocation.x + numberMapPointsPerCentimeter : zombieMapPointLocation.x - numberMapPointsPerCentimeter;
             }
             
-            // Animate the zombie to the new location by converting the MKMapPoint
-            // back to a coordinate and setting it to the zombie's location
+            // Move the zombie's Annotation View to the new coordinate
             zombieLocation = MKCoordinateForMapPoint(zombieMapPointLocation);
-            [UIView animateWithDuration:1.0 animations:^{
-                [zombieAnnotation setCoordinate:zombieLocation];
-            }];
+            zombieAnnotation.coordinate = zombieLocation;
+            
+            // TODO: Check for end-game state
         }
     }
 }
@@ -124,7 +141,7 @@
     
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     // Zoom in to and center the user withina five-kilomer radius
-    if (self.isFirstTimeLocatingUser) {
+    if (self.game.isNewGame) {
         MKCoordinateRegion region;
         MKCoordinateSpan span;
         CLLocationCoordinate2D location;
@@ -135,9 +152,9 @@
         region.span = span;
         region.center = location;
         [mapView setRegion:region animated:YES];
-        self.firstTimeLocatingUser = NO;
         // Place zombies in the vicinity of the newly-placed user
         [self placeZombiesOnMap];
+        self.game.newGame = NO;
     }
 }
 

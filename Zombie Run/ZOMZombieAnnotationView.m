@@ -14,7 +14,7 @@
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     
     if (self) {
-        self.image = [UIImage imageNamed:@"Zombie"];
+        self.image = [UIImage imageNamed:@"Mobster_2"];
         self.canShowCallout = NO;
         self.draggable = NO;
         self.enabled = NO;

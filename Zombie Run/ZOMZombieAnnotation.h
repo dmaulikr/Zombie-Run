@@ -13,4 +13,5 @@
 
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 
+
 @end
